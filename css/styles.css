@@ -18,6 +18,14 @@ body {
 	margin-right: auto;
 
 	padding-top: 80px;
+
+	/* position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #111111;
+	opacity: 0.5; */
 }
 h1,
 h2,
@@ -142,6 +150,22 @@ img {
 }
 .icon-address {
 	margin-right: 10px;
+}
+
+/* MODALKA */
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	min-width: 528px;
+	min-height: 581px;
+	padding: 15px;
+	background: #ffffff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
 }
 
 /* HERO */
@@ -435,18 +459,14 @@ img {
 .item-content:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-/* .container {
-  outline: 1px solid green;
-} */
 
-/* OVERFLOW PORTFOLIO */
+/*  ПОЗИЦИОНИРОВАНИЕ */
 
 .position {
 	position: relative;
 	overflow: auto;
 }
 .position-text {
-	/* font-family: Roboto; */
 	color: #fff;
 	font-weight: 400;
 	font-size: 18px;
@@ -461,24 +481,22 @@ img {
 	opacity: 0;
 }
 
-.position-text:hover {
+.item-content:hover .position-text {
 	opacity: 1;
 }
 
-.position.portfolio:hover::before {
+.item-content:hover .position.portfolio::before {
+	content: "";
 	display: inline-block;
 	position: absolute;
-	content: "";
 	width: 100%;
 	height: 100%;
 	background-color: rgba(33, 150, 243, 0.9);
 }
-
 /* SCROLL BACKGROUND */
 
 .position.portfolio {
 	background-color: rgba(33, 150, 243, 0.9);
-	background-color: ;
 	background-attachment: scroll;
 }
 
